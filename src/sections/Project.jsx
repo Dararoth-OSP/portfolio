@@ -1,7 +1,4 @@
-import React, { useEffect } from "react";
-import { BsArrowRightCircle } from "react-icons/bs";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
@@ -14,6 +11,7 @@ const Project = () => {
         "Note Taking Project using React JS & Real-time database (Firebase)",
       fromDate: "June 01",
       toDate: "June 18",
+      fadeDuaration: 900,
     },
     {
       id: "p002",
@@ -23,6 +21,7 @@ const Project = () => {
         "Foods, drinks, and dessert recipe platform where people can serach for their favorite cursine.",
       fromDate: "July 18",
       toDate: "July 26",
+      fadeDuaration: 700,
     },
     {
       id: "p003",
@@ -32,12 +31,9 @@ const Project = () => {
         "This car buy&sell platform where people can serach for their dream car.",
       fromDate: "June 28",
       toDate: "July 01",
+      fadeDuaration: 500,
     },
   ];
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
 
   return (
     <div id="project" className="relative py-16">
@@ -45,12 +41,9 @@ const Project = () => {
         My Recent Work
       </h1>
 
-      <div
-        className="flex max-w-[1200px] px-6 mx-auto flex-col md:flex-row  gap-10"
-        data-aos="fade-up"
-      >
+      <div className="flex max-w-[1200px] px-6 mx-auto flex-col md:flex-row  gap-10">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} duration={project.fadeDuaration}/>
         ))}
       </div>
     </div>

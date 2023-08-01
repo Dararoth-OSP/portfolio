@@ -1,10 +1,46 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, duration }) => {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Adjust the threshold as needed
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+
+      // Cleanup the observer when the component unmounts
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  const cardStyle = {
+    opacity: isVisible ? 1 : 0,
+    transform: `translateX(${isVisible ? 0 : -100}px)`, // Negative value to move from the left
+    transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
+  };
+
   return (
-    <div className="space-y-4 relative p-4 tracking-[-0.1em] duration-200  bg-zinc-800/50 hover:bg-zinc-800/80 border-t border-t-transparent hover:border-t-zinc-100/10 hover:shadow-xl">
-      <img src={project.image} />
+    <div
+      ref={cardRef}
+      style={cardStyle}
+      className="space-y-4 relative p-4 tracking-[-0.1em] duration-200  bg-zinc-800/50 hover:bg-zinc-800/80 border-t border-t-transparent hover:border-t-zinc-100/10 hover:shadow-xl"
+    >
+      <img src={project.image} alt={project.title} />
       <span className="text-red-700 text-xs flex items-center gap-2">
         {project.fromDate}
         <div className="w-20 border-t border-red-700" /> {project.toDate}

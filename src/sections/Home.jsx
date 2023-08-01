@@ -1,10 +1,8 @@
 import React from "react";
-import { SlArrowDown } from "react-icons/sl";
 import { BsArrowRightCircle } from "react-icons/bs";
 import FollowMe from "../components/FollowMe";
 import normalPic from "../assets/normal-bg.png";
-import monoPic from "../assets/mono.png"
-import normalPNG from "../assets/normal.png"
+import { Section } from "../components/Section";
 
 const Home = () => {
   const scrollToSection = () => {
@@ -20,7 +18,7 @@ const Home = () => {
       className="h-screen bg-gradient-to-tr from-[#181818] from-20% to-red-700 "
     >
       <div className="max-w-[1200px] h-full gap-x-20 px-4 flex items-center xs:justify-center 2xl:mx-auto text-white">
-        <div className="relative">
+        <Section className="relative">
           <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold -ml-2">
             OUK
             <br className="sm:hidden" />
@@ -44,17 +42,18 @@ const Home = () => {
             SEE MORE{" "}
             <BsArrowRightCircle className="inline-block w-6 h-6 mx-2 rotate-90" />
           </button>
-        </div>
+        </Section>
         <div className="relative">
-          <div
-            className="w-[400px] h-[400px] hidden bg-no-repeat lg:block relative z-20 bg-cover bg-center rounded-full shadow-2xl"
-            style={{
-              backgroundImage: `url(${normalPic})`,
-              backgroundSize: 450
-              
-            }}
-          ></div>
-          <div className="w-[400px] h-[400px] bg-[#181818]  shadow-2xl hidden lg:block absolute -bottom-0 z-10 -right-0 rounded-full drop-shadow-xl bg-cover "></div>
+          <Section>
+            <div
+              className="w-[400px] h-[400px] hidden bg-no-repeat lg:block relative z-20 bg-cover bg-center rounded-full shadow-2xl"
+              style={{
+                backgroundImage: `url(${normalPic})`,
+                backgroundSize: 450,
+              }}
+            ></div>
+            <div className="w-[400px] h-[400px] bg-[#181818]  shadow-2xl hidden lg:block absolute -bottom-0 z-10 -right-0 rounded-full drop-shadow-xl bg-cover "></div>
+          </Section>
         </div>
       </div>
     </div>

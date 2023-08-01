@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useSpring, animated } from "react-spring";
 import { TfiDownload } from "react-icons/tfi";
+import { Section } from "../components/Section";
+import SkillBar from "../components/SkillBar";
 
-const Number = ({ n }) => {
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: n,
-    delay: 200,
-    config: { mass: 1, tension: 20, friction: 10 },
-  });
-  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-};
 
 const About = () => {
   const [count, setCount] = useState(0);
@@ -63,90 +55,13 @@ const About = () => {
 
       <div className=" lg:basis-3/5 space-y-4 ">
         <h1 className="font-bold text-xl text-white mb-5">MY SKILLS</h1>
-        <div className="w-full space-y-2">
-          <span>HTML</span>
-          <div
-            className={`w-14 ${
-              count && "w-[90%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right flex gap-1 mr-2 text-white font-semibold">
-              <Number n={90} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>CSS</span>
-          <div
-            className={`w-14 ${
-              count && "w-[70%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={70} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>Javascript</span>
-          <div
-            className={`w-14 ${
-              count && "w-[50%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={50} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>React JS</span>
-          <div
-            className={`w-14 ${
-              count && "w-[70%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={70} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>SQL</span>
-          <div
-            className={`w-14 ${
-              count && "w-[60%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={60} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>C# (.NET)</span>
-          <div
-            className={`w-14 ${
-              count && "w-[40%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={40} />%
-            </span>
-          </div>
-        </div>
-        <div className="w-full space-y-2">
-          <span>Python</span>
-          <div
-            className={`w-14 ${
-              count && "w-[50%]"
-            } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
-          >
-            <span className="float-right mr-2 flex gap-1 text-white font-semibold">
-              <Number n={50} />%
-            </span>
-          </div>
-        </div>
+        <SkillBar title="HTML" percent={90} />
+        <SkillBar title="CSS" percent={70} />
+        <SkillBar title="Javascript" percent={50} />
+        <SkillBar title="React JS" percent={70} />
+        <SkillBar title="SQL" percent={60} />
+        <SkillBar title="C# (.NET)" percent={40} />
+        <SkillBar title="Python" percent={50} />
       </div>
     </div>
   );

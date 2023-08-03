@@ -40,7 +40,7 @@ const ProjectCard = ({ project, duration }) => {
       style={cardStyle}
       className="space-y-4 relative p-4 tracking-[-0.1em] duration-200  bg-zinc-800/50 hover:bg-zinc-800/80 border-t border-t-transparent hover:border-t-zinc-100/10 hover:shadow-xl"
     >
-      {/* <img src={project.image} alt={project.title} /> */}
+      <img src={project.image} alt={project.title} />
       <span className="text-red-700 text-xs flex items-center gap-2">
         {project.fromDate}
         <div className="w-20 border-t border-red-700" /> {project.toDate}

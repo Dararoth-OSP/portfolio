@@ -6,7 +6,7 @@ const Project = () => {
     {
       id: "p001",
       title: "MyNote",
-      // image: "src/assets/note-taking-project.png",
+      image: "src/assets/note-taking-project.png",
       description:
         "Note Taking Project using React JS & Real-time database (Firebase)",
       fromDate: "June 01",
@@ -16,7 +16,7 @@ const Project = () => {
     {
       id: "p002",
       title: "OneTwoCook",
-      // image: "src/assets/one-two-cook.png",
+      image: "src/assets/one-two-cook.png",
       description:
         "Foods, drinks, and dessert recipe platform where people can serach for their favorite cursine.",
       fromDate: "July 18",
@@ -26,7 +26,7 @@ const Project = () => {
     {
       id: "p003",
       title: "PhumiCar",
-      // image: "src/assets/phumiCar.png",
+      image: "src/assets/phumiCar.png",
       description:
         "This car buy&sell platform where people can serach for their dream car.",
       fromDate: "June 28",

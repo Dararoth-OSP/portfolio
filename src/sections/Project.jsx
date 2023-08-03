@@ -40,7 +40,6 @@ const Project = () => {
       <h1 className="text-center uppercase mb-12 px-6 text-3xl font-semibold">
         My Recent Work
       </h1>
-
       <div className="flex max-w-[1200px] px-6 mx-auto flex-col md:flex-row  gap-10">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} duration={project.fadeDuaration}/>

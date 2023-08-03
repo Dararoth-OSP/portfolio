@@ -67,9 +67,8 @@ const SkillBar = (props) => {
     <div className="w-full space-y-2">
       <span>{props.title}</span>
       <div
-        className={`w-14 ${
-          count && `w-[${props.percent}%]`
-        } duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
+        className={`duration-[2000ms] h-7 bg-gradient-to-r from-red-900 to-red-700`}
+        style={count ? { width: `${props.percent}%` } : { width: "50px" }}
       >
         <span className="float-right flex gap-1 mr-2 text-white font-semibold">
           <Number n={props.percent} />%

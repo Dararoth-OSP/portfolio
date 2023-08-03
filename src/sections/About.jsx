@@ -5,14 +5,7 @@ import { TfiDownload } from "react-icons/tfi";
 import { Section } from "../components/Section";
 import SkillBar from "../components/SkillBar";
 
-
 const About = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setCount(1);
-  }, [count]);
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);

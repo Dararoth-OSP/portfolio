@@ -1,12 +1,15 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
+import MyNote from "../assets/note-taking-project.png";
+import OneTwoCook from "../assets/one-two-cook.png";
+import PhumiCar from "../assets/phumiCar.png";
 
 const Project = () => {
   const projects = [
     {
       id: "p001",
       title: "MyNote",
-      image: "src/assets/note-taking-project.png",
+      image: MyNote,
       description:
         "Note Taking Project using React JS & Real-time database (Firebase)",
       fromDate: "June 01",
@@ -16,7 +19,7 @@ const Project = () => {
     {
       id: "p002",
       title: "OneTwoCook",
-      image: "src/assets/one-two-cook.png",
+      image: OneTwoCook,
       description:
         "Foods, drinks, and dessert recipe platform where people can serach for their favorite cursine.",
       fromDate: "July 18",
@@ -26,7 +29,7 @@ const Project = () => {
     {
       id: "p003",
       title: "PhumiCar",
-      image: "src/assets/phumiCar.png",
+      image: PhumiCar,
       description:
         "This car buy&sell platform where people can serach for their dream car.",
       fromDate: "June 28",
@@ -42,7 +45,11 @@ const Project = () => {
       </h1>
       <div className="flex max-w-[1200px] px-6 mx-auto flex-col md:flex-row  gap-10">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} duration={project.fadeDuaration}/>
+          <ProjectCard
+            key={project.id}
+            project={project}
+            duration={project.fadeDuaration}
+          />
         ))}
       </div>
     </div>

@@ -11,7 +11,7 @@ const Project = () => {
       title: "MyNote",
       image: MyNote,
       description:
-        "Note Taking Project using React JS & Real-time database (Firebase)",
+        "MyNote, a user-friendly website for writing, viewing, and managing notes efficiently",
       fromDate: "June 01",
       toDate: "June 18",
       fadeDuaration: 900,
@@ -21,7 +21,7 @@ const Project = () => {
       title: "OneTwoCook",
       image: OneTwoCook,
       description:
-        "Foods, drinks, and dessert recipe platform where people can serach for their favorite cursine.",
+        "Recipe website that is a convenient and interactive platform for all cooking enthusiasts.",
       fromDate: "July 18",
       toDate: "July 26",
       fadeDuaration: 700,

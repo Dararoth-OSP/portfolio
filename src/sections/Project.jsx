@@ -11,10 +11,11 @@ const Project = () => {
       title: "MyNote",
       image: MyNote,
       description:
-        "MyNote, a user-friendly website for writing, viewing, and managing notes efficiently",
+        "A user-friendly website for writing, viewing, and managing notes efficiently",
       fromDate: "June 01",
       toDate: "June 18",
       fadeDuaration: 900,
+      link: "https://wonderful-puppy-d85d32.netlify.app/",
     },
     {
       id: "p002",
@@ -25,6 +26,7 @@ const Project = () => {
       fromDate: "July 18",
       toDate: "July 26",
       fadeDuaration: 700,
+      link: 'https://dararoth-osp.github.io/one-two-cook/'
     },
     {
       id: "p003",
@@ -35,6 +37,7 @@ const Project = () => {
       fromDate: "June 28",
       toDate: "July 01",
       fadeDuaration: 500,
+      link: ' '
     },
   ];
 

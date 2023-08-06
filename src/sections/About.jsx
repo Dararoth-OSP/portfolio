@@ -41,9 +41,13 @@ const About = () => {
           that enable businesses to reach their objectives.
         </p>
 
-        <button className="flex items-center gap-x-2 px-4 py-2 border hover:bg-white/5 active:bg-white/10">
+        <a
+          href="src\assets\My Resume.pdf"
+          target="_blank"
+          className="flex items-center justify-center w-48 gap-x-2 px-4 py-2 border hover:bg-white/5 active:bg-white/10"
+        >
           MY RESUME <TfiDownload />
-        </button>
+        </a>
       </div>
 
       <div className=" lg:basis-3/5 space-y-4 ">

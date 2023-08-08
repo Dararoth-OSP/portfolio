@@ -42,8 +42,8 @@ const About = () => {
         </p>
 
         <a
-          href="src\assets\my-resume.pdf"
-          target="_blank"
+          // href="src\assets\my-resume.pdf"
+          // target="_blank"
           className="flex items-center justify-center w-48 gap-x-2 px-4 py-2 border hover:bg-white/5 active:bg-white/10"
         >
           MY RESUME <TfiDownload />
